@@ -11,6 +11,8 @@ html, body{
 	margin: 0;
 	padding: 0;
 	font-family: 'PT Sans', sans-serif;
+	background: #3d7dca;
+	color: #FFF;
 }
 
 .list{
@@ -32,10 +34,11 @@ html, body{
 	height: auto;
 	transform-origin: top center;
 	will-change: transform;
-	transition: all .5s;
+	transition: all .3s;
 }
 .list .item:hover{
 	background: #ffcb05;
+	color: #003a70;
 }
 .list .item.hidden{
 	transform: scaleY(0);

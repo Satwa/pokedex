@@ -9,35 +9,38 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 - [x] Dependencies managed by Composer
 - [ ] List of Pokemon
 	- [x] API
+	- [x] Filter Pokemon by name
+	- [x] MVP UI
 	- [ ] UI
 - [ ] Get Pokemon details
 	- [x] API
-	- [ ] UI
+	- [x] MVP UI
+	- [ ] UI (add links to other pages)
 - [ ] Get Ability details
 	- [x] API
-	- [ ] UI
+	- [ ] MVP UI
 	- [ ] UI
 - [ ] Get Game details
 	- [ ] API
-	- [ ] UI
-- [ ] Async search of a specific Pokemon (by name)
-	- [x] API
+	- [ ] MVP UI
 	- [ ] UI
 - [ ] Cache
 	- [x] Home
-	- [ ] Pokemon page (per pokemon?)
+	- [x] Pokemon page (per pokemon?)
 	- [ ] Game page (per game?)
 	- [ ] Ability page (per ability?)
+	- [ ] **(final)** Enable cache everywhere
 - [ ] Error-proof
 - [ ] Pictures
 
 
 ### If-time features
 
-- [ ] Routing
+- [ ] [Routing](https://github.com/dannyvankooten/AltoRouter)
 - [ ] Play with more specfic endpoints
 - [ ] Add SEO tags (meta, schema.org JSON-LD..)
 - [ ] favicon
+- [ ] 404 page
 
 ### Run the project
 
