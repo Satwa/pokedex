@@ -7,18 +7,19 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 ### Planned features
 
 - [x] Dependencies managed by Composer
-- [] List of Pokemon
-- [] Async search of a specific Pokemon (by name)
-- [] Cache
-- [] Error-proof
-- [] Pictures
+- [ ] List of Pokemon
+- [ ] Async search of a specific Pokemon (by name)
+- [ ] Cache
+- [ ] Error-proof
+- [ ] Pictures
 
 
 ### If-time features
 
-- [] Routing
-- Play with more specfic endpoints
-
+- [ ] Routing
+- [ ] Play with more specfic endpoints
+- [ ] Add SEO tags (meta, schema.org JSON-LD..)
+- [ ] favicon
 
 ### Run the project
 
