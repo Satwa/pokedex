@@ -1,0 +1,15 @@
+{
+    "name": "satwa/pokedex",
+    "description": "Pokedex using PokeAPI made in HTML/CSS/JS/PHP for learning purpose (college)",
+    "type": "project",
+    "require": {
+        "optimisme/optimisme-cache": "^1.2"
+    },
+    "license": "UNLICENSED",
+    "authors": [
+        {
+            "name": "Joshua",
+            "email": "satwa.fr@gmail.com"
+        }
+    ]
+}
