@@ -49,9 +49,6 @@ class PokeAPIClient {
 
 		$data = json_decode($data);
 
-		echo $http_code;
-		echo $data;
-		
         if ($http_code != 200) { // request not 200 OK
             return [
                 'status'  => $http_code,

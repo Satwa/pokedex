@@ -9,18 +9,22 @@ $api = new Satwa\PokeAPIClient();
 
 if(isset($_GET["name"]) && !empty($_GET["name"])){
 	$pokemon =  $api->getPokemonList();
-	print_r($pokemon);
+
+	$filtered = [];
 
 	if(!array_key_exists("error", $pokemon)){
-		/* array_filter($pokemon, function($elm){
-			print_r($elm);
-		}); */
-	}else{ // we also should set header http status to 500
-		echo json_encode([
-			"error" => "Internal Server Error"
-		]);
+		array_filter($pokemon->results, function($item){
+			global $filtered;
+			if(strpos($item->name, $_GET["name"]) !== false){
+				$filtered[] = $item;
+			}
+		}); 
+		echo json_encode($filtered);
+	}else{
+		http_response_code(500);
 	}
 }else{
+	http_response_code(400);
 	echo json_encode([
 		"error" => "Missing parameters"
 	]);

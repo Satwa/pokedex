@@ -8,7 +8,11 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 
 - [x] Dependencies managed by Composer
 - [ ] List of Pokemon
+	- [x] API
+	- [ ] UI
 - [ ] Async search of a specific Pokemon (by name)
+	- [x] API
+	- [ ] UI
 - [ ] Cache
 - [ ] Error-proof
 - [ ] Pictures
