@@ -10,10 +10,24 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 - [ ] List of Pokemon
 	- [x] API
 	- [ ] UI
+- [ ] Get Pokemon details
+	- [x] API
+	- [ ] UI
+- [ ] Get Ability details
+	- [x] API
+	- [ ] UI
+	- [ ] UI
+- [ ] Get Game details
+	- [ ] API
+	- [ ] UI
 - [ ] Async search of a specific Pokemon (by name)
 	- [x] API
 	- [ ] UI
 - [ ] Cache
+	- [x] Home
+	- [ ] Pokemon page (per pokemon?)
+	- [ ] Game page (per game?)
+	- [ ] Ability page (per ability?)
 - [ ] Error-proof
 - [ ] Pictures
 

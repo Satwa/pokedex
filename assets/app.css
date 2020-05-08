@@ -1,7 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+/*
+	Color Palette (https://brandpalettes.com/pokemon-color-codes/)
+	YELLOW #ffcb05
+	BLUE #3d7dca
+	NAVY #003a70
+*/
 
 html, body{
 	margin: 0;
 	padding: 0;
-	font-family: 'Balsamiq Sans', cursive;
+	font-family: 'PT Sans', sans-serif;
+}
+
+.list{
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	max-width: 200px;
+	overflow: scroll;
+	/* flex: 0 1 auto; */
+}
+
+.list .item{
+	padding: 10px;
+	color: inherit;
+	text-decoration: none;
+	font-weight: normal;
+
+	transform: scaleY(1);
+	height: auto;
+	transform-origin: top center;
+	will-change: transform;
+	transition: all .5s;
+}
+.list .item:hover{
+	background: #ffcb05;
+}
+.list .item.hidden{
+	transform: scaleY(0);
+	background: #ffcb05;
+	/** these two are not will-change compliant **/
+	height: 0;
+	padding: 0;
 }

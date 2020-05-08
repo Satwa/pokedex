@@ -17,7 +17,7 @@ class PokeAPIClient {
 
 	// Pokemon-related queries
 	public function getPokemonList(){
-		return $this->doRequest($this->root . 'pokemon?limit=-1');
+		return $this->doRequest($this->root . 'pokemon?limit=-1')->results;
 	}
 
 	public function getPokemonDetails($name){
