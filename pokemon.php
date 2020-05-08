@@ -5,7 +5,7 @@ require_once 'lib/pokeapi.php';
 $api = new Satwa\PokeAPIClient();
 
 if(!isset($_GET['name']) || empty($_GET['name'])){
-	header('Location: /404.html');
+	header('Location: /404');
 	return;
 }
 $cacheManager = new Optimisme\Cache('pokemon-'.$_GET['name']); // dynamic cache per pokemon
@@ -14,7 +14,7 @@ if($cacheManager->open()):
 	$pokemon = $api->getPokemonDetails($_GET['name']);
 
 	if(array_key_exists('error', $pokemon)){
-		header('Location: /404.html');
+		header('Location: /404');
 		return;	
 	}
 
@@ -33,7 +33,7 @@ if($cacheManager->open()):
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title><?= $pokemon->name; ?> is in your Pokedex</title>
 
-		<link rel="stylesheet" href="assets/app.css">
+		<link rel="stylesheet" href="/assets/app.css">
 	</head>
 	<body>
 		<h1><a href="/" title="Back to Pokedex home">Pokedex</a></h1>
@@ -67,7 +67,7 @@ if($cacheManager->open()):
 		<ul>
 			<?php foreach($pokemon->moves as $move): ?>
 				<li>
-					<a href="move.php?name=<?= $move->move->name; ?>" title="Get more info on <?= $move->move->name; ?> move">
+					<a href="/move/<?= $move->move->name; ?>" title="Get more info on <?= $move->move->name; ?> move">
 						<?= ucwords(str_replace('-', ' ', $move->move->name)); ?>
 					</a>
 				</li>
@@ -84,6 +84,6 @@ if($cacheManager->open()):
 	</body>
 	</html>
 <?php 
-// $cacheManager->save();
+$cacheManager->save();
 endif;	
 ?>

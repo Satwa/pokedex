@@ -1,0 +1,11 @@
+RewriteEngine on
+Options +FollowSymLinks
+Options -MultiViews
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ErrorDocument 404 /404
+
+RewriteRule ^move([a-zA-Z0-9-]+)/?$ /move.php?name=$1
+RewriteRule ^pokemon/([a-zA-Z0-9-]+)/?$ /pokemon.php?name=$1
+RewriteRule ^404$ /404.html

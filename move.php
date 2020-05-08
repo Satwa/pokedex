@@ -5,7 +5,7 @@ require_once 'lib/pokeapi.php';
 $api = new Satwa\PokeAPIClient();
 
 if(!isset($_GET['name']) || empty($_GET['name'])){
-	header('Location: /404.html');
+	header('Location: /404');
 	return;
 }
 $cacheManager = new Optimisme\Cache('move-'.$_GET['name'], 604800); // dynamic cache per pokemon, 7-day cache
@@ -14,7 +14,7 @@ if($cacheManager->open()):
 	$move = $api->getMoveDetails($_GET['name']);
 
 	if(array_key_exists('error', $move)){
-		header('Location: /404.html');
+		header('Location: /404');
 		return;	
 	}
 
@@ -27,7 +27,7 @@ if($cacheManager->open()):
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Learn more about <?= $move->name; ?> move</title>
 
-		<link rel="stylesheet" href="assets/app.css">
+		<link rel="stylesheet" href="/assets/app.css">
 	</head>
 	<body>
 		<h1><a href="/" title="Back to Pokedex home">Pokedex</a></h1>

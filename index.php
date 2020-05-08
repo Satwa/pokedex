@@ -23,13 +23,13 @@ if($cacheManager->open()):
 		<input type="text" name="pokemonName" id="PokemonName" class="js-pokename" placeholder="Try Charmander">
 		<div class="list js-list">
 			<?php foreach($pokemonList as $pokemon): ?>
-				<a href="pokemon.php?name=<?= $pokemon->name ?>" class="item" id="<?= $pokemon->name ?>">
+				<a href="/pokemon/<?= $pokemon->name ?>" class="item" id="<?= $pokemon->name ?>">
 					<?= ucwords(str_replace('-', ' ', $pokemon->name)); ?>
 				</a>
 			<?php endforeach; ?>
 		</div>
 
-		<script src="assets/app.js"></script>
+		<script src="/assets/app.js"></script>
 	</body>
 	</html>
 <?php 
