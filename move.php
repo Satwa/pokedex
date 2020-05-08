@@ -30,17 +30,17 @@ if($cacheManager->open()):
 		<link rel="stylesheet" href="assets/app.css">
 	</head>
 	<body>
-		<h1>Pokedex</h1>
+		<h1><a href="/" title="Back to Pokedex home">Pokedex</a></h1>
 
 		<h3><?= $move->name; ?> (<?= $move->type->name ?>)</h3>
 
 
 		<h4>Stats</h4>
 		<ul>
-			<li>Accuracy: <?= $move->accuracy ?>%</li>
-			<li>Power points: <?= $move->pp ?>%</li>
-			<li>Base power: <?= $move->power ?>%</li>
-			<li>Priority: <?= $move->priority ?>%</li>
+			<li>Accuracy: <?= $move->accuracy === null ? 0 : $move->accuracy ?>%</li>
+			<li>Power points: <?= $move->pp   === null ? 0 : $move->pp       ?>%</li>
+			<li>Base power: <?= $move->power  === null ? 0 : $move->power    ?>%</li>
+			<li>Priority: <?= $move->priority === null ? 0 : $move->priority ?>%</li>
 			<li>Affects: <?= ucwords(str_replace('-', ' ', $move->target->name)); ?></li>
 		</ul>
 	</body>

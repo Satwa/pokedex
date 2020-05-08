@@ -18,7 +18,7 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 	- [x] MVP UI
 	- [ ] UI (add links to other pages)
 	- [ ] Cache active (no debug purpose anymore)
-- [ ] Get Ability details
+- [x] Get Ability details
 	- [x] API
 - [ ] Get Move details
 	- [x] API
@@ -30,10 +30,10 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 
 ### If-time features
 
-- [ ] [Routing](https://github.com/dannyvankooten/AltoRouter)
+- [ ] Routing
 - [ ] Play with more specfic endpoints
 - [ ] Add SEO tags (meta, schema.org JSON-LD..)
-- [ ] favicon
+- [x] favicon ([source](https://www.favicon.cc/?action=icon&file_id=931450))
 - [ ] 404 page
 
 ### Run the project

@@ -15,6 +15,11 @@ html, body{
 	color: #FFF;
 }
 
+h1 a{
+	color: #ffcb05;
+	text-decoration: none;
+}
+
 .list{
 	display: flex;
 	flex-direction: column;

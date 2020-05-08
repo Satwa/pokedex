@@ -3,7 +3,7 @@ require_once 'vendor/autoload.php';
 require_once 'lib/pokeapi.php';
 
 $api = new Satwa\PokeAPIClient();
-$cacheManager = new Optimisme\Cache();
+$cacheManager = new Optimisme\Cache(null, 604800);
 if($cacheManager->open()):
 	$pokemonList = $api->getPokemonList();
 ?>
@@ -17,7 +17,7 @@ if($cacheManager->open()):
 		<link rel="stylesheet" href="assets/app.css">
 	</head>
 	<body>
-		<h1>Pokedex</h1>
+		<h1><a href="/" title="Back to Pokedex home">Pokedex</a></h1>
 
 		<h3>Pokemon List</h3>
 		<input type="text" name="pokemonName" id="PokemonName" class="js-pokename" placeholder="Try Charmander">
@@ -33,6 +33,6 @@ if($cacheManager->open()):
 	</body>
 	</html>
 <?php 
-// DISABLED FOR DEV PURPOSE: $cacheManager->save();
+$cacheManager->save();
 endif;	
 ?>

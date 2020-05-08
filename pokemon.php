@@ -36,7 +36,7 @@ if($cacheManager->open()):
 		<link rel="stylesheet" href="assets/app.css">
 	</head>
 	<body>
-		<h1>Pokedex</h1>
+		<h1><a href="/" title="Back to Pokedex home">Pokedex</a></h1>
 
 		<h3><?= $pokemon->name; ?> (<?= ucfirst($pokemon->types[0]->type->name); ?>)</h3>
 		<?php 
