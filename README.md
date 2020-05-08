@@ -20,25 +20,13 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 	- [ ] Cache active (no debug purpose anymore)
 - [ ] Get Ability details
 	- [x] API
-- [ ] Get Game details
-	- [ ] API
-	- [ ] MVP UI
-	- [ ] UI
-	- [ ] Cache active (no debug purpose anymore)
 - [ ] Get Move details
 	- [x] API
 	- [x] MVP UI
 	- [ ] UI
 	- [x] Cache active (no debug purpose anymore)
-- [ ] Cache
-	- [x] Home
-	- [x] Pokemon page (per pokemon?)
-	- [ ] Game page (per game?)
-	- [ ] Ability page (per ability?)
-	- [ ] **(final)** Enable cache everywhere
-- [ ] Error-proof
-- [ ] Pictures
-
+- [ ] **(final)** Enable cache everywhere
+- [ ] Error-proof *(rip beginners coding on windows and dealing with ssl errors tho <3)*
 
 ### If-time features
 
