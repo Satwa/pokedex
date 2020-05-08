@@ -12,12 +12,12 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 	- [x] Filter Pokemon by name (client-side)
 	- [x] MVP UI
 	- [ ] UI
-	- [ ] Cache active (no debug purpose anymore)
+	- [x] Cache active (no debug purpose anymore)
 - [ ] Get Pokemon details
 	- [x] API
 	- [x] MVP UI
 	- [ ] UI (add links to other pages)
-	- [ ] Cache active (no debug purpose anymore)
+	- [x] Cache active (no debug purpose anymore)
 - [x] Get Ability details
 	- [x] API
 - [ ] Get Move details
@@ -25,12 +25,12 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_)
 	- [x] MVP UI
 	- [ ] UI
 	- [x] Cache active (no debug purpose anymore)
-- [ ] **(final)** Enable cache everywhere
+- [x] **(final)** Enable cache everywhere
 - [ ] Error-proof *(rip beginners coding on windows and dealing with ssl errors tho <3)*
 
 ### If-time features
 
-- [ ] Routing
+- [x] Routing (htaccess-based)
 - [ ] Play with more specfic endpoints
 - [ ] Add SEO tags (meta, schema.org JSON-LD..)
 - [x] favicon ([source](https://www.favicon.cc/?action=icon&file_id=931450))
