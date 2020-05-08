@@ -25,8 +25,12 @@ class PokeAPIClient {
 		return $this->doRequest($this->root . "pokemon/$name");
 	}
 	
-	public function getAbility($name){
+	public function getAbilityDetails($name){
 		return $this->doRequest($this->root . "ability/$name");
+	}
+	
+	public function getMoveDetails($name){
+		return $this->doRequest($this->root . "move/$name");
 	}
 	
 	/**

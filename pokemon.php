@@ -13,12 +13,18 @@ $cacheManager = new Optimisme\Cache('pokemon-'.$_GET['name']); // dynamic cache 
 if($cacheManager->open()):
 	$pokemon = $api->getPokemonDetails($_GET['name']);
 
-	if(array_key_exists("error", $pokemon)){
+	if(array_key_exists('error', $pokemon)){
 		header('Location: /404.html');
 		return;	
 	}
 
 	$pokemon->name = ucwords(str_replace('-', ' ', $pokemon->name));
+
+	// Get abilities details
+	foreach($pokemon->abilities as $index => $ability){
+		$pokemon->abilities[$index] = $api->getAbilityDetails($ability->ability->name);
+	}
+
 ?>
 	<!DOCTYPE html>
 	<html lang="en">
@@ -43,21 +49,28 @@ if($cacheManager->open()):
 		<h4>Stats</h4>
 		<ul>
 			<?php foreach($pokemon->stats as $stat): ?>
-				<li><?= ucwords(str_replace('-', ' ', $stat->stat->name)); ?>: <?= $stat->base_stat ?> (<?= $stat->effort ?> EV)</li>
+				<li><?= ucwords(str_replace('-', ' ', $stat->stat->name)); ?>: <?= $stat->base_stat ?> (<?= $stat->effort; ?> EV)</li>
 			<?php endforeach; ?>
 		</ul>
 
 		<h4>Abilities</h4>
 		<ul>
 			<?php foreach($pokemon->abilities as $ability): ?>
-				<li><?= ucwords(str_replace('-', ' ', $ability->ability->name)); ?></li>
+				<li><?= ucwords(str_replace('-', ' ', $ability->name)); ?></li>
+				<ul>
+					<li><?= $ability->effect_entries[0]->short_effect; ?></li>
+				</ul>
 			<?php endforeach; ?>
 		</ul>
 
 		<h4>Moves</h4>
 		<ul>
 			<?php foreach($pokemon->moves as $move): ?>
-				<li><?= ucwords(str_replace('-', ' ', $move->move->name)); ?></li>
+				<li>
+					<a href="move.php?name=<?= $move->move->name; ?>" title="Get more info on <?= $move->move->name; ?> move">
+						<?= ucwords(str_replace('-', ' ', $move->move->name)); ?>
+					</a>
+				</li>
 			<?php endforeach; ?>
 		</ul>
 

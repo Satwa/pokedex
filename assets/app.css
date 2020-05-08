@@ -47,3 +47,11 @@ html, body{
 	height: 0;
 	padding: 0;
 }
+
+ul li a{
+	color: #ffcb05;
+	text-decoration: none;
+}
+ul li a:hover{
+	text-decoration: underline;
+}
