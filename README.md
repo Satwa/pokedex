@@ -13,10 +13,10 @@ Made by [Joshua Tabakhoff](https://twitter.com/joshtab_) with this [CodePen desi
 	- [x] MVP UI
 	- [x] UI
 	- [x] Cache active (no debug purpose anymore)
-- [ ] Get Pokemon details
+- [x] Get Pokemon details
 	- [x] API
 	- [x] MVP UI
-	- [ ] UI (add links to other pages)
+	- [x] UI (add links to other pages)
 	- [x] Cache active (no debug purpose anymore)
 - [x] Get Ability details
 	- [x] API
