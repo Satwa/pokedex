@@ -34,15 +34,46 @@ if($cacheManager->open()):
 
 		<h3><?= $move->name; ?> (<?= $move->type->name ?>)</h3>
 
-
-		<h4>Stats</h4>
-		<ul>
-			<li>Accuracy: <?= $move->accuracy === null ? 0 : $move->accuracy ?>%</li>
-			<li>Power points: <?= $move->pp   === null ? 0 : $move->pp       ?>%</li>
-			<li>Base power: <?= $move->power  === null ? 0 : $move->power    ?>%</li>
-			<li>Priority: <?= $move->priority === null ? 0 : $move->priority ?>%</li>
-			<li>Affects: <?= ucwords(str_replace('-', ' ', $move->target->name)); ?></li>
-		</ul>
+		<div class="box">
+			<div class="switch-container">
+				<div class="joy-con-left">
+					<div class="ellipse-button"></div>
+					<div class="analog-left"></div>
+					<div class="d-pad-container-left">
+						<div class="d-pad-top"></div>
+						<div class="d-pad-left"></div>
+						<div class="d-pad-right"></div>
+						<div class="d-pad-bottom"></div>
+					</div>
+					<div class="square-button"></div>
+				</div>
+				<div class="joy-con-right">
+					<div class="analog-right"></div>
+					<div class="d-pad-container-right">
+						<div class="d-pad-top"></div>
+						<div class="d-pad-left"></div>
+						<div class="d-pad-right"></div>
+						<div class="d-pad-bottom"></div>
+					</div>
+					<div class="circle-button-right"></div>
+					<div class="d-pad-2-container">
+						<div class="d-pad-2-vertical"></div>
+						<div class="d-pad-2-horizontal"></div>
+					</div>
+				</div>
+				<div class="screen-outer">
+					<div class="screen-inner vcenter">
+						<ul>
+							<li><?= $move->accuracy === null ? 0 : $move->accuracy ?>% Accuracy</li>
+							<li><?= $move->pp       === null ? 0 : $move->pp       ?>% Power points</li>
+							<li><?= $move->power    === null ? 0 : $move->power    ?>% Base power</li>
+							<li><?= $move->priority === null ? 0 : $move->priority ?>% Priority</li>
+							<li>Affects: <?= ucwords(str_replace('-', ' ', $move->target->name)); ?></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
 	</html>
 <?php 

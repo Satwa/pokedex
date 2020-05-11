@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 /**
 * PokeAPI dead-simple wrapper
 */
-class PokeAPIClient {
+class PokeAPIClient{
 	
 	public function __construct(){
 		$this->root = 'https://pokeapi.co/api/v2/';
@@ -49,12 +49,12 @@ class PokeAPIClient {
 		curl_setopt($request, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($request, CURLOPT_CONNECTTIMEOUT, 10); // timeout after 10sec
 		$data = curl_exec($request);
-		$http_code = curl_getinfo($request,  CURLINFO_RESPONSE_CODE );
+		$http_code = curl_getinfo($request,  CURLINFO_RESPONSE_CODE);
 		curl_close($request);
 		
 		$data = json_decode($data);
 		
-		if ($http_code !== 200) { // request not 200 OK
+		if($http_code !== 200){ // request not 200 OK
 			return [
 				'status'  => $http_code,
 				'error'   => $data,
